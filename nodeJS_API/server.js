@@ -35,6 +35,21 @@ app.get("/", async (req, res) => {
   }
 });
 
+app.get("/fetch", async (req, res) => {
+  const URL = "https://catfact.ninja/fact";
+
+  /* use fetch to sent GET request (use try-catch in case error)*/
+  try {
+    let response = await fetch(URL)
+    let data = await response.json()
+    res.render("index", {data:data})
+    
+  } catch (err) {
+    console.error(err.message);
+    res.render("index", {error:err.message})
+  }
+});
+
 /* Create Listener */
 const PORT = 3000;
 app.listen(PORT, () => {
