@@ -14,8 +14,26 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 /* Set up EJS view engine */
-app.set("views", path.join(__dirname, "/views"))
-app.set("view engine", "ejs")
+app.set("views", path.join(__dirname, "/views"));
+app.set("view engine", "ejs");
+
+/* Route handling */
+app.get("/", async (req, res) => {
+  const URL = "https://catfact.ninja/fact";
+
+  /* use Axios to sent GET request (use try-catch in case error)*/
+  try {
+    /* Response of axios.get is an object with params of 
+      {data, statusCode, statusMessage, ...} but here we 
+      just destructure it to get only the data parameter */
+    const {data} = await axios.get(URL);
+    res.render("index", {data:data})
+    
+  } catch (err) {
+    console.error(err.message);
+    res.render("index", {error:err.message})
+  }
+});
 
 /* Create Listener */
 const PORT = 3000;
