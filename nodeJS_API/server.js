@@ -26,12 +26,11 @@ app.get("/", async (req, res) => {
     /* Response of axios.get is an object with params of 
       {data, statusCode, statusMessage, ...} but here we 
       just destructure it to get only the data parameter */
-    const {data} = await axios.get(URL);
-    res.render("index", {data:data})
-    
+    const { data } = await axios.get(URL);
+    res.render("index", { data: data });
   } catch (err) {
     console.error(err.message);
-    res.render("index", {error:err.message})
+    res.render("index", { error: err.message });
   }
 });
 
@@ -40,13 +39,26 @@ app.get("/fetch", async (req, res) => {
 
   /* use fetch to sent GET request (use try-catch in case error)*/
   try {
-    let response = await fetch(URL)
-    let data = await response.json()
-    res.render("index", {data:data})
-    
+    let response = await fetch(URL);
+    let data = await response.json();
+    res.render("index", { data: data });
   } catch (err) {
     console.error(err.message);
-    res.render("index", {error:err.message})
+    res.render("index", { error: err.message });
+  }
+});
+
+app.post("/", async (req, res) => {
+  try {
+    let { category, difficulty } = req.body;
+    let URL = `https://opentdb.com/api.php?amount=1&category=${category}&difficulty=${difficulty}`;
+
+    let { data } = await axios.get(URL);
+    /* Check the data console log to see format of response */
+    console.log(data);
+    res.render("index", { data: data.results[0] });
+  } catch (err) {
+    res.render("index", { error: err.message });
   }
 });
 
