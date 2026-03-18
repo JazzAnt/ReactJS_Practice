@@ -1,0 +1,83 @@
+[
+  {
+    "title": "Python Data Science Handbook",
+    "author": "Jake VanderPlas",
+    "numberInStock": 5,
+    "price": 200.56,
+    "rating": 4,
+    "publishYear": "2020-01-03T19:04:28.809Z",
+    "like": true
+  },
+  {
+    "title": "R for Data Science",
+    "author": "Garret Grolemund and Hadley Wickham",
+    "numberInStock": 15,
+    "price": 159.0,
+    "rating": 3,
+    "publishYear": "2020-01-03T19:04:28.809Z",
+    "like": true
+  },
+  {
+    "title": "Guide to Big data Hadoop Distributed File System",
+    "author": "Kartikeya Mishra",
+    "numberInStock": 9,
+    "price": 232.49,
+    "rating": 2,
+    "publishYear": "2016-02-02T23:10:28.809Z",
+    "like": true
+  },
+  {
+    "title": "Eloquent JavaScript",
+    "author": "Marijn Haverbeke",
+    "numberInStock": 19,
+    "price": 156.99,
+    "rating": 3,
+    "publishYear": "2012-01-05T12:45:18.605Z",
+    "like": true
+  },
+  {
+    "title": "Eloquent JavaScript",
+    "author": "Marijn Haverbeke",
+    "numberInStock": 19,
+    "price": 156.99,
+    "rating": 1,
+    "publishYear": "2012-01-10T11:56:18.324Z",
+    "like": false
+  },
+  {
+    "title": "JavaScript: The Good Parts",
+    "author": "Douglas Crockford",
+    "numberInStock": 4,
+    "price": 120.89,
+    "rating": 4,
+    "publishYear": "2014-05-30T12:40:18.787Z",
+    "like": true
+  },
+  {
+    "title": "The Robotic Process Automation Handbook",
+    "author": "Tom Taulli",
+    "numberInStock": 3,
+    "price": 125.9,
+    "rating": 3,
+    "publishYear": "2017-02-03T19:05:28.549Z",
+    "like": false
+  },
+  {
+    "title": "Stream Data Mining",
+    "author": "Leszek Rutkowski",
+    "numberInStock": 13,
+    "price": 239.0,
+    "rating": 3,
+    "publishYear": "2019-01-06T19:05:28.231Z",
+    "like": true
+  },
+  {
+    "title": "Introduction to Statistical Learning",
+    "author": "Gareth James",
+    "numberInStock": 17,
+    "price": 239.0,
+    "rating": 2,
+    "publishYear": "2018-01-05T23:04:28.809Z",
+    "like": false
+  }
+]

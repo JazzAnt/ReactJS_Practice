@@ -1,0 +1,18 @@
+mongoDB is a noSQL database that handles documents
+can run locally, or on cloud using Mongo Atlas
+
+Mongoose is a Node.js library that helps integrate MongoDB to Node.js
+Provides a structured way to interact with MongoDB databases using js
+
+Mongoose Provides
+- data structure defining
+- CRUD actions
+- validation (did you adhere to data structure format before saving)
+
+Steps
+- Login to atlas, create a database
+- Create connection 
+- Create database and collection
+- Insert database data e.g. from Json
+- and Retrieve connection setting
+- see atlas_uri, db.js, and server.js for how to connect
